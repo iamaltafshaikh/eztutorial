@@ -290,7 +290,14 @@ const featureCourse = async (req, res) => {
   }
 };
 
-module.exports = { 
+// module.exports = { 
+//   getCourses, getCourseById, createCourse, updateCourse, deleteCourse, 
+//   enrollInCourse, getMyCourses, getComments, addComment,
+//   getEnrolledStudents, removeStudentFromCourse, deleteComment,
+//   getFeaturedCourse, featureCourse
+// };
+
+export { 
   getCourses, getCourseById, createCourse, updateCourse, deleteCourse, 
   enrollInCourse, getMyCourses, getComments, addComment,
   getEnrolledStudents, removeStudentFromCourse, deleteComment,
