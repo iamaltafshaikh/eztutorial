@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { registerUser, loginUser } = require('../controllers/authController');
+const { registerUser, loginUser } = require('../../lib/controllers/authController');
 
 // Route for http://localhost:5000/api/auth/register
 router.post('/register', registerUser);

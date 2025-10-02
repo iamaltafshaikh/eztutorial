@@ -15,8 +15,8 @@ const {
   deleteComment,
   getFeaturedCourse,
   featureCourse
-} = require('../controllers/courseController');
-const { protect, isTeacher } = require('../middleware/authMiddleware');
+} = require('../../lib/controllers/courseController');
+const { protect, isTeacher } = require('../../lib/middleware/authMiddleware');
 
 // General routes
 router.route('/').get(getCourses).post(protect, isTeacher, createCourse);
