@@ -8,13 +8,10 @@ import '../../lib/models/Transaction.js';
 export default async function handler(req, res) {
   await connectDB();
 
-  // This endpoint handles GET for all courses and POST to create a new one
+  // This endpoint handles GET for all courses
   if (req.method === 'GET') {
     return getCourses(req, res);
-  } 
-  // NOTE: We will handle the POST (createCourse) logic later.
-  // Let's get the GET request working first.
-  else {
+  } else {
     res.setHeader('Allow', ['GET']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
