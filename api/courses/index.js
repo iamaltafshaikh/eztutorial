@@ -8,7 +8,6 @@ import '../../lib/models/Transaction.js';
 export default async function handler(req, res) {
   await connectDB();
 
-  // This endpoint handles GET for all courses
   if (req.method === 'GET') {
     return getCourses(req, res);
   } else {
