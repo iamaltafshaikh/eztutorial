@@ -1,10 +1,11 @@
-const express = require('express');
+import express from 'express';
+import { getMyEnrolledCourses, updateCourseProgress, getUserStats } from '../controllers/userController.js';
+import { protect } from '../middleware/authMiddleware.js';
+
 const router = express.Router();
-const { getMyEnrolledCourses, updateCourseProgress, getUserStats } = require('../../lib/controllers/userController'); // <-- IMPORT
-const { protect } = require('../../lib/middleware/authMiddleware');
 
 router.get('/my-courses', protect, getMyEnrolledCourses);
 router.post('/my-courses/progress', protect, updateCourseProgress);
-router.get('/stats', protect, getUserStats); // <-- ADD THIS ROUTE
+router.get('/stats', protect, getUserStats);
 
-module.exports = router;
+export default router;
